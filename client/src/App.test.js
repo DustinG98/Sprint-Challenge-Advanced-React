@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import '@testing-library/jest-dom'
-import { render, fireEvent } from '@testing-library/react'
+import { render, fireEvent, waitForDomChange } from '@testing-library/react'
 import NavBar from './components/NavBar';
 
 it('renders without crashing', () => {
@@ -38,3 +38,10 @@ test('search chart is on the page', () => {
 
   expect(chart).toBeInTheDocument()
 })
+
+// test('renders 100 players', async () => {
+//   const { getAllByTestId } = render(<App/>)
+//   const players = await waitForDomChange(() => getAllByTestId("player")) 
+
+//   expect(players.length > 99)
+// })

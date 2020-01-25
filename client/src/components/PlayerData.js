@@ -20,7 +20,7 @@ class PlayerData extends React.Component{
                 <PlayerSearchChart players={this.state.players}/>
                 <div className="players">
                     {this.state.players.map(player => {
-                        return <PlayerCard key={player.id} player={player}/>
+                        return <PlayerCard data-testid="player" key={player.id} player={player}/>
                     })}
                 </div>
             </div>

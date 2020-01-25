@@ -10,7 +10,7 @@ const PlayerSearchChart = ({players}) => {
             <h2>Player Searches > 6</h2>
             <PieChart width={500} height={250} data-testid="searchChart">
                 <Pie data={filteredPlayers} dataKey="searches" nameKey="name" cx="50%" cy="50%" innerRadius={50} outerRadius={80} label>
-                    {players.map((player, index) => <Cell fill={colorArr[index % colorArr.length]}/>)}
+                    {players.map((player, index) => <Cell key={index} fill={colorArr[index % colorArr.length]}/>)}
                 </Pie>
                 <Legend />
             </PieChart>
