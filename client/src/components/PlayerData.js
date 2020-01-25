@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import PlayerCard from './PlayerCard'
+import PlayerSearchChart from './PlayerSearchChart'
 
 class PlayerData extends React.Component{
     constructor() {
@@ -15,10 +16,13 @@ class PlayerData extends React.Component{
     }
     render() {
         return (
-            <div className="players">
-                {this.state.players.map(player => {
-                    return <PlayerCard key={player.id} player={player}/>
-                })}
+            <div >
+                <PlayerSearchChart players={this.state.players}/>
+                <div className="players">
+                    {this.state.players.map(player => {
+                        return <PlayerCard key={player.id} player={player}/>
+                    })}
+                </div>
             </div>
         )
     }
