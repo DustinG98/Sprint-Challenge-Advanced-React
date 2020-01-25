@@ -31,3 +31,10 @@ test('navbar contains players text', () => {
 
   expect(header).toBeInTheDocument()
 })
+
+test('search chart is on the page', () => {
+  const { getByTestId } = render(<App/>)
+  const chart = getByTestId("searchChart")
+
+  expect(chart).toBeInTheDocument()
+})
